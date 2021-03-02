@@ -1,0 +1,30 @@
+@mixin flex($main:space-between,$align:center){
+  display: flex;
+  justify-content:$main;
+  align-items:$align;
+}
+
+@mixin bgImg($w:55px,$h:55px,$img:'',$bgs:contain) {
+  width: $w;
+  height: $h;
+  background: url($img) no-repeat center;
+  background-size: $bgs;
+}
+
+@mixin position($pos:fixed,$w:100%,$h:100%,$t:0,$l:0){
+  position: $pos;
+  width: $w;
+  height: $h;
+  top: $t;
+  left: $t;
+}
+
+@mixin positionImg($pos,$t,$r,$w,$h,$img){
+  position: $pos;
+  top: $t;
+  right: $r;
+  width: $w;
+  height: $h;
+  background: url($img) no-repeat center;
+  background-size: contain;
+}

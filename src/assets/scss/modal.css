@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*
+  样式规范表
+*/
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 66;
+  transition: all 0.5s;
+}
+
+.modal .mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.modal.fade-enter-active {
+  top: 0;
+}
+
+.modal.fade-leve-active {
+  top: -100%;
+}
+
+.modal.fade-enter {
+  top: -100%;
+}
+
+.modal .ts-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 660px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.modal .ts-box .ts-header {
+  height: 60px;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.modal .ts-box .ts-header h1 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 60px;
+  padding-left: 25px;
+}
+
+.modal .ts-box .ts-header .ts-close {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 14px;
+  height: 14px;
+  background: url("/imgs/icon-close.png") no-repeat center;
+  background-size: contain;
+  transition: transform .3s;
+  cursor: pointer;
+}
+
+.modal .ts-box .ts-header .ts-close:hover {
+  transform: scale(1.5);
+}
+
+.modal .ts-box .ts-body {
+  padding: 42px 40px 54px;
+  font-size: 14px;
+}
+
+.modal .ts-box .ts-footer {
+  height: 82px;
+  width: 100%;
+  background-color: #F5F5F5;
+  line-height: 82px;
+  text-align: center;
+}

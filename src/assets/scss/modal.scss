@@ -1,0 +1,79 @@
+// @import './config.scss';
+// @import './mixin.scss';
+.modal{
+  @include position();
+  z-index: 66;
+  transition: all 0.5s;
+  .mask{
+    @include position();
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  &.fade-enter-active{
+    top:0
+  }
+
+  &.fade-leve-active{
+    top: -100%;
+  }
+
+  &.fade-enter{
+    top: -100%;
+  }
+  .ts-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 660px;
+    transform: translate(-50%,-50%);
+    background-color: $colorG;
+    .ts-header{
+      height: 60px;
+      width: 100%;
+      background-color: $colorJ;
+      h1{
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 60px;
+        padding-left: 25px;
+      }
+      .ts-close{
+        @include positionImg(absolute,23px,23px,14px,14px,'/imgs/icon-close.png');
+        transition: transform .3s;
+        cursor: pointer;
+        &:hover{
+         transform: scale(1.5);
+        }
+      }
+    }
+    .ts-body{
+      padding: 42px 40px 54px;
+      font-size: 14px;
+    }
+    .ts-footer{
+      // box-sizing: border-box;
+      height: 82px;
+      width: 100%;
+      // padding: 26px 210px;
+      background-color: $colorJ;
+      line-height: 82px;
+      text-align: center;
+     // .btn-group{
+        // @include flex();
+        // width: 240px;
+        // height: 30px;
+        // line-height: 30px;
+        // .btn{
+        //   width: 110px;
+        //   text-align: center;
+        //   background-color: $colorA;
+        //   color: $colorJ;
+        //   cursor: pointer;
+        //   &:last-child{
+        //     background-color:#b0b0b0;
+        //   }
+        // }
+     // }
+    }
+  }
+}
